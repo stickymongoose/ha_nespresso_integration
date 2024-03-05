@@ -82,7 +82,7 @@ class VenusMachine(CoffeeMachine):
 '''Vertuo Pop'''
 class Dv2Machine(CoffeeMachine):
     def __init__(self, name: str, serial: str):
-        super().__init__(MachineType.DV2, name, serial)
+        super().__init__(MachineType.CV2, name, serial)
         self.state_enum = VenusMachineState
 
     def default_configurations(self):
@@ -104,7 +104,7 @@ class CoffeeMachineFactory:
                 return ProdigoMachine(model_name, serial)
             case MachineType.VENUS:
                 return VenusMachine(model_name, serial)
-            case MachineType.DV2:
+            case MachineType.CV2:
                 return Dv2Machine(model_name, serial)
             case _:
                 print(f"No specific machine found for model {model_name}. Using default.")
