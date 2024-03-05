@@ -78,6 +78,7 @@ class MachineType(Enum):
     PRODIGIO = auto()
     VENUS = auto()
     DV2 = auto()
+    CV2 = auto()
 
 class BrewType(Enum):
     RISTRETTO = 0
